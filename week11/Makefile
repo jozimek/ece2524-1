@@ -15,5 +15,8 @@ main: ${OBJ}
 	 	  -e '/^$$/ d' -e 's/$$/ :/' < $*.P >> $*.d; \
 	  rm -f $*.P
 
+archive:
+         tar -cvzf archive.tar.gz  Makefile README *.h *.cpp 
+
 clean:
 	-rm *.o *.d *~
